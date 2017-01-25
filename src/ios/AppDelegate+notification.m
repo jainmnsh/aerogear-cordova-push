@@ -115,7 +115,8 @@ static char launchNotificationKey;
     NSLog(@"active");
 
     //zero badge
-    application.applicationIconBadgeNumber = 0;
+    // disabling so that plugin does not remove the notification from notification center
+   // application.applicationIconBadgeNumber = 0;
 
     if (![self.viewController.webView isLoading] && self.launchNotification) {
         AGPushPlugin *pushHandler = [self getCommandInstance:@"PushPlugin"];
